@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kor">
 
 <head>
   <meta charset="utf-8">
@@ -9,11 +9,12 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}"
+  rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="./static/css/mdb.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'css/mdb.min.css') }}" rel="stylesheet">
   <!-- Your custom styles (optional) -->
-  <link href="./static/css/style.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'css/style.min.css') }}" rel="stylesheet">
   <style type="text/css">
     html,
     body,
@@ -221,20 +222,49 @@
 
           <!--Grid column-->
           <div class="col-md-6 mb-4">
-            <h3 class="h3 mb-3" align="center">기상정보 입력</h3>
-            <!-- Large input : 기상정보 입력하기 -->
-            <br>
-            <input class="form-control form-control-lg" type="text"
-                   placeholder="평균기온">
-            <br>
-            <input class="form-control form-control-lg" type="text"
-                   placeholder="최저기온">
-            <br>
-            <input class="form-control form-control-lg" type="text"
-                   placeholder="최고기온">
-            <br>
-            <input class="form-control form-control-lg" type="text"
-                   placeholder="강수량">
+
+            <!--데이터를 전송하기 위한 폼태그 적용 -->
+            <!--폼 테그는 div 태그에 속하도록  -->
+            <!-- Default form group -->
+            <form action="/" method="post">
+              <h3 class="h3 mb-3" align="center">기상정보 입력</h3>
+              <!-- Default input -->
+              <div class="form-group">
+                <label for="formGroupExampleInput">평균 기온</label>
+                <input type="text" class="form-control"
+                       id="formGroupExampleInput" placeholder="평균 기온을 입력하세요."
+                       name = 'avg_temp'>
+              </div>
+
+              <!-- Default input -->
+              <div class="form-group">
+                <label for="formGroupExampleInput">최저 기온</label>
+                <input type="text" class="form-control"
+                       id="formGroupExampleInput" placeholder="최저 기온을 입력하세요."
+                       name = 'min_temp'>
+              </div>
+
+              <!-- Default input -->
+              <div class="form-group">
+                <label for="formGroupExampleInput">최고 기온</label>
+                <input type="text" class="form-control"
+                       id="formGroupExampleInput" placeholder="최고 기온을 입력하세요."
+                       name = 'max_temp'>
+              </div>
+
+              <!-- Default input -->
+              <div class="form-group">
+                <label for="formGroupExampleInput">강수량</label>
+                <input type="text" class="form-control"
+                       id="formGroupExampleInput" placeholder="강수량을 입력하세요."
+                       name = 'rain_fall'>
+              </div>
+            </form>
+            <!-- Default form group -->
+              <div class="col-auto" align="right">
+                <button type="submit" class="btn btn-primary mb-0">예상하기</button>
+              </div>
+            </form>
           </div>
           <!--Grid column-->
 
@@ -274,7 +304,7 @@
   </footer>
   <!--/.Footer-->
 
-  <!-- SCRIPTS -->
+  <!-- 자바스크립트 영역 -->
   <!-- JQuery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <!-- Bootstrap tooltips -->
