@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'layout.html' %} <!-- 레이아웃의 html형식을 그대로 가져오기   -->
+
+{% block body %}
+<h1>Articles</h1>
+<ul class="list-group"> <!-- 부트스트랩의 css형식 클래스-->
+    {% for article in articles %}
+        <li class="list-group-item"><a href="article/{{article.id}}">{{article.title}}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock%}

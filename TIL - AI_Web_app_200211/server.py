@@ -1,14 +1,12 @@
 # -*- coding : utf-8 -*-
 
-from flask import Flask, render_template, request  # 라이브러리 호출
+from flask import Flask, render_template  # 라이브러리 호출
 
-import datetime
-import tensorflow as tf
 # import tensorflow.compat.v1 as tf
 # tf.disable_v2_behavior()
-import numpy as np
 
 app = Flask(__name__)  # 플라스크 앱 설정
+
 
 # x = tf.placeholder(tf.float32, shape=[None, 4])
 # y = tf.placeholder(tf.float32, shape=[None, 1])
