@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+
+  <body>
+
+
+      <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="" target="_blank">
+        <strong>951237</strong>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <main>
+    <h1>Hello, world!</h1>
+    <div class="container">
+
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn">
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!--데이터를 전송하기 위한 폼태그 적용 -->
+            <!--폼 테그는 div 태그에 속하도록  -->
+            <!-- Default form group -->
+            <form action="/" method="post">
+              <h3 class="h3 mb-3" align="center">기상정보 입력</h3>
+              <!-- Default input -->
+              <div class="form-group">
+                <label for="formGroupExampleInput">평균 기온</label>
+                <input type="text" class="form-control"
+                       name="avg_temp" placeholder="평균 기온을 입력하세요."
+                       >
+              </div>
+
+              <!-- Default input -->
+              <div class="form-group">
+                <label for="formGroupExampleInput">최저 기온</label>
+                <input type="text" class="form-control"
+                       name="min_temp" placeholder="최저 기온을 입력하세요."
+                       >
+              </div>
+
+              <!-- Default input -->
+              <div class="form-group">
+                <label for="formGroupExampleInput">최고 기온</label>
+                <input type="text" class="form-control"
+                       name="max_temp" placeholder="최고 기온을 입력하세요."
+                       >
+              </div>
+
+              <!-- Default input -->
+              <div class="form-group">
+                <label for="formGroupExampleInput">강수량</label>
+                <input type="text" class="form-control"
+                       name="rain_fall" placeholder="강수량을 입력하세요."
+                       >
+              </div>
+            </form>
+            <!-- Default form group -->
+              <div class="col-auto" align="right">
+                <button type="submit" class="btn btn-primary mb-0">예상하기</button>
+              </div>
+            </form>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!-- Main heading -->
+            <h3 class="h3 mb-3" align="center">배추가격 예측 결과</h3>
+            <!-- Main heading -->
+
+            <hr>
+            <br>
+            {% if price %}
+              <h3 class="h3 mb-3" align="center">배추가격 예측 결과 : {{ price }}</h3>
+            {% endif %}
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </section>
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
