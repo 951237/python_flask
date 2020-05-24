@@ -32,7 +32,9 @@
     </div>
   </form>
   <div class="graph">
-    <img src="myFile.png" alt="그래프" class="">
+    {% if True %}
+    <img src="{{ url_for('static', filename=image_file) }}">
+    {% endif %}
   </div>
 
   <!-- Optional JavaScript -->
