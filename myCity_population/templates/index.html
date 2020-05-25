@@ -20,22 +20,28 @@
       <p class="lead">현재 거주하는 동의 이름을 입력하면 연령별 인구를 그래프로 보여드립니다.</p>
     </div>
   </div>
-  <form>
+  <form action="/" method="post">
     <div class="form-group row container">
       <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">거주지</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="조회하고 싶은 동을 입력하시오.">
+        <input type="text" class="form-control form-control-lg" name="city" placeholder="조회하고 싶은 동을 입력하시오.">
       </div>
       <div class="col-sm-3">
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </div>
   </form>
-  <div class="graph">
-    {% if True %}
-    <img src="{{ url_for('static', filename=image_file) }}">
-    {% endif %}
-  </div>
+  {% if city %}
+  <h4 class="title">{{ city }}</h4>
+  {% endif %}
+  {% if df_man %}
+  <p class="_print">{{ df_man }}</p>
+  {% endif %}
+  <!--  <div class="graph">-->
+<!--    {% if True %}-->
+<!--    <img src="{{ url_for('static', filename=image_file) }}">-->
+<!--    {% endif %}-->
+<!--  </div>-->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
