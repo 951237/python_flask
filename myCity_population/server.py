@@ -21,6 +21,12 @@ def index():
     if request.method == 'POST':
         city = str(request.form['city'])
         df_city = df[df['행정구역'].str.contains(city)]  # 새솔동 이름 들어간 행을 선택하기
+
+        if len(df_city) > 1:
+            df_city = df_city.iloc[0:1, :]
+        else:
+            pass
+
         df_man = df_city.iloc[:, 3:104]  # 남자 인구부분만 선택
         df_woman = df_city.iloc[:, 106:208]  # 여자 인구부분만 선택
         time.sleep(0.5)
