@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>{{city}} 인구현황</h1>
+<h1>{{city}} 인구분포</h1>
 <div>
     {% if True %}
     <img class="graph" src="{{ url_for('static', filename=image_file) }}">
     {% endif %}
+    <span class="">
+        <button class="btn btn-primary" onclick="location.href='/'"">다시 조회하기</button>
+    </span>
 </div>
+
 <!--{{data | safe}}-->
 {% endblock %}
