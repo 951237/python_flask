@@ -1,0 +1,7 @@
+.graph {
+   resize: both; /* 이미지 최대 사이즈에 적용 */
+   float: center; /* 가운데 정렬 */
+   max-width: 1000px; /* 넓이를 지정 */
+   height: auto; /* 높이를 지정 */
+   margin: 5px 0; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
+}
